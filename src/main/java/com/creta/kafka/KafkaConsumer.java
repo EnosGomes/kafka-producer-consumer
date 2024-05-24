@@ -11,6 +11,7 @@ public class KafkaConsumer {
     @KafkaListener(topics = "enos", groupId = "group")
     public void flightEventConsumer(TaskStatus taskStatus) {
         log.info("Consumer consume Kafka message -> {}", taskStatus);
+        System.out.println("Configurar log que nao seja o SL4J porque ele eh perigoso");
     }
 }
 
